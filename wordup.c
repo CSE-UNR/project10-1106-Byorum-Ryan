@@ -32,8 +32,6 @@ int main() {
         printf("Enter your guess: ");
         fgets(guess, sizeof(guess), stdin);
 
-        if (guess[WORD_LEN] == '\n') {
-            guess[WORD_LEN] = '\0';
         }
 
         toLowerCase(guess);
@@ -66,13 +64,13 @@ int main() {
 
 
 void loadWord(char word[]) {
-    FILE *file = fopen("word.txt", "r");
+    FILE *file = fopen("mystery.txt", "r");
     if (file == NULL) {
         printf("Error: could not open word.txt\n");
         word[0] = '\0';
         return;
     }
-    fscanf(file, "%5s", word);
+    fscanf(file, "%s", word);
     fclose(file);
 }
 
