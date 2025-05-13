@@ -10,7 +10,6 @@
 
 void loadWord(char word[]);
 void toLowerCase(char str[]);
-bool isAlpha(char c);
 bool isValidGuess(const char guess[]);
 void checkGuess(const char guess[], const char word[], char formatted[], char hint[]);
 void printGuesses(char guesses[][WORD_LEN + 1], char hints[][WORD_LEN + 1], int numGuesses);
