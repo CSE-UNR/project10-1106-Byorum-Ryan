@@ -37,7 +37,7 @@ int main() {
         toLowerCase(guess);
 
         if (!isValidGuess(guess)) {
-            printf("Invalid guess! Make sure it's 5 letters, all alphabets.\n");
+            printf("Invalid guess! Make sure it's 5 letters.\n");
         }
         else{
             clearString(guesses[numGuesses], WORD_LEN + 1);
@@ -53,7 +53,7 @@ int main() {
     }
 
     if (won) {
-        printf("Congratulations! You guessed the word!\n");
+        printf("You guessed the word!\n");
     }
     else {
         printf("Out of guesses! The word was '%s'.\n", word);
